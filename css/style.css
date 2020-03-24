@@ -238,7 +238,6 @@ div[class^='tag-'] p {
 }
 div[class^='bar-'] {
 	position: absolute;
-	/* width: 50%; */
 	background-color: #48CFAD;
 	height: 10px;
 	border-radius: 20px;
@@ -250,17 +249,17 @@ div[class^='bar-'] {
 .bar-javascript,
 .bar-react,
 .bar-nodejs {
-	width: calc(0 -6px);
+	width: 0%;
 
 }
-.bar-html{width: 80%; animation: html }
-.bar-css{width: 80%; animation: css }
+/* .bar-html{width: 80%; animation: html; } */
+/* .bar-css{width: 80%; animation: css }
 .bar-javascript{width: 70%; animation: javascript}
 .bar-react{width: 75%; animation: react}
 .bar-nodejs{width: 50%; animation: node}
 .bar-photo{width: 70%; animation: photo}
 .bar-illustrator{width: 35%; animation: illustrator}
-.bar-aftereffect{width: 40%; animation: aftereffect}
+.bar-aftereffect{width: 40%; animation: aftereffect} */
 
 
 .comp-section{
@@ -418,11 +417,11 @@ opacity: 1;
 	height: 50px;
 }
 
-@keyframes html {
+/* @keyframes html {
 	0%{
 		width: 0%;
 	}
 	100%{
 		width: 80%;
 	}
-}
+} */

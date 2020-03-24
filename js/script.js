@@ -6,26 +6,39 @@ spans.forEach(span => span.addEventListener('mouseout',function(e) {
   span.classList.remove('animated', 'rubberBand')
 }))
 
+
 const htmlBar = document.querySelector('.bar-html')
 const cssBar = document.querySelector('.bar-css')
 const jsBar = document.querySelector('.bar-javascript')
 const reactBar = document.querySelector('.bar-react')
 const nodeBar = document.querySelector('.bar-nodejs')
+const photo = document.querySelector('.bar-photo')
+const illustrator = document.querySelector('.bar-illustrator')
+const aftereffect = document.querySelector('.bar-aftereffect')
+const num = document.querySelectorAll('.num')
 
-var t1 = new TimelineLite()
+TweenLite.defaultEase = Linear.easeNone;
+var controller = new ScrollMagic.Controller();
+var tl = new TimelineMax();
 
-t1.fromTo(htmlBar, .75, {with: `calc(0% - 6px)`}, {width: `calc(90% -6px)`, ease: Power4.easeOut}).fromTo(cssBar, .75, {with: `calc(0% - 6px)`}, {width: `calc(95% -6px)`, ease: Power4.easeOut})
-  .fromTo(jsBar, .75, {with: `calc(0% - 6px)`}, {width: `calc(70% -6px)`, ease: Power4.easeOut})
-  .fromTo(reactBar, .75, {with: `calc(0% - 6px)`}, {width: `calc(80% -6px)`, ease: Power4.easeOut})
-  .fromTo(nodeBar, .75, {with: `calc(0% - 6px)`}, {width: `calc(60% -6px)`, ease: Power4.easeOut})
+tl.fromTo(num, .50, {left: `0%`}, {left: `95%`})
+  .fromTo(htmlBar, .50, {with: `0%`}, {width: `80%`, ease: Power4.easeOut})
+  .fromTo(photo, .50, {with: `0%`}, {width: `70%`, ease: Power4.easeOut})
+  .fromTo(cssBar, .50, {with: `0%`}, {width: `85%`, ease: Power4.easeOut})
+  .fromTo(illustrator, .50, {with: `0%`}, {width: `85%`, ease: Power4.easeOut})
+  .fromTo(jsBar, .50, {with: `0%`}, {width: `70%`, ease: Power4.easeOut})
+  .fromTo(aftereffect, .50, {with: `0%`}, {width: `70%`, ease: Power4.easeOut})
+  .fromTo(reactBar, .50, {with: `0%`}, {width: `75%`, ease: Power4.easeOut})
+  .fromTo(nodeBar, .50, {with: `0%`}, {width: `50%`, ease: Power4.easeOut})
 
-const controller = new ScrollMagic.Controller()
-const scene = new ScrollMagic.Scene({
+var scene = new ScrollMagic.Scene({
   triggerElement: ".skills",
-  triggerHook: 0
+  triggerHook: 1
 })
-.setTween(t1)
-.addTo(controller)
+  .setTween(tl)
+  .addTo(controller);
+
+scene.addIndicators();
 
 const showRequiredCategory = event => {
   console.log(event.id)
