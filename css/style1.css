@@ -1,0 +1,28 @@
+.container-dev{
+  padding: 2em;
+}
+
+.container-dev h1{
+  color: white;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.container-dev p{
+  width: 1000px;
+  color: white;
+  text-align: justify;
+  margin: 2em auto 2em auto;
+  font-size: 1.2em;
+
+}
+
+.details{
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+.details video{
+  display: block;
+  margin: auto;
+}
