@@ -370,8 +370,8 @@ footer p {
 	-webkit-transition: all ease .5s;
 	-moz-transition: all ease .5s;
 }
-.portfolio-hover p{ font-size: 20px; color:white; line-height: 1.5em; text-transform: capitalize; margin-top: 1em; font-weight: bold;}
-.portfolio-hover i{  font-size: 40px; }
+.portfolio-hover p{ font-size: 20px; color:white; line-height: 1.5em; text-transform: none; margin-top: 1em; font-weight: bold;}
+.portfolio-hover i{  font-size: 40px; color: #ED5565;}
 .portfolio-hover:hover {
 opacity: 1;
 }
