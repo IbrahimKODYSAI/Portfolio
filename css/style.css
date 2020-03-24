@@ -2,17 +2,15 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'PT Sans', sans serif;
+	font-family: 'Muli', sans-serif;
 }
+
 html {
 	scroll-behavior: smooth;
 }
-
 .container {
 	padding: 0 100px 0 100px;
-
 }
-
 nav ul,
 .main-info-section,
 .work-category {
@@ -20,7 +18,6 @@ nav ul,
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
-
 body {
 	background-color: #252627;
 }
@@ -34,7 +31,10 @@ header {
 
 .navbar {
 	background-color: #181818;
-	/* border-bottom: 2px solid #ED5565; */
+	/* position: fixed;
+	width: 100%;
+	z-index: 100; */
+	border-bottom: 2px solid #ED5565;
 }
 
 header h1,
@@ -91,7 +91,8 @@ span.name {
 span.m-left {
 	margin-left: -10px;
 }
-.text p {
+.text p{
+	margin-top: 0.8em;
 	letter-spacing: 3px;
 	word-spacing: 10px;
 	font-size: .8rem;
@@ -133,11 +134,11 @@ span.m-left {
 
 .profile-image img{
 	width: 450px;
-	margin-top: 100px;
+	margin-top: 30px;
 }
 .about {
 	height: 100vh;
-	margin-top: 50px;
+	/* margin-top: 30px; */
 }
 
 .about h1,
@@ -153,7 +154,7 @@ span.m-left {
 	box-shadow: 0 0 1.2rem rgba(0,0,0.25);
 	padding: 50px;
 	position: relative;
-	top: -70px;
+	top: -10px;
 	left: 50%;
 	right: 50%;
 	transform: translateX(-50%);
@@ -173,10 +174,10 @@ span.m-left {
 .about img{
 	width: 400px;
 	position: relative;
-	top: -350px;
-	left: calc(100% - 235px);
-	right: calc(100% - 100px);
-	transform: translateX(calc(-100% + 100px));
+	top: -300px;
+	left: 550px;
+	/* right: calc(100% - 100px); */
+	/* transform: translateX(calc(-100% + 100px)); */
 }
 
 .skills h1,
@@ -252,15 +253,6 @@ div[class^='bar-'] {
 	width: 0%;
 
 }
-/* .bar-html{width: 80%; animation: html; } */
-/* .bar-css{width: 80%; animation: css }
-.bar-javascript{width: 70%; animation: javascript}
-.bar-react{width: 75%; animation: react}
-.bar-nodejs{width: 50%; animation: node}
-.bar-photo{width: 70%; animation: photo}
-.bar-illustrator{width: 35%; animation: illustrator}
-.bar-aftereffect{width: 40%; animation: aftereffect} */
-
 
 .comp-section{
 	display: flex;
@@ -269,6 +261,7 @@ div[class^='bar-'] {
 }
 
 .work-category button {
+	margin-top: 50px;
 	text-transform: capitalize;
 	border: 3px solid #ED5565;
 	padding: 15px 30px;
@@ -279,8 +272,8 @@ div[class^='bar-'] {
 	background-color: #252627;
 	outline: none;
 	cursor: pointer;
+	transition: 0.5s;
 }
-
 div[class^='category-'] {
 	margin-top: 50px;
 	display: grid;
@@ -296,6 +289,7 @@ div[class^='category-'] {
 
 .work-category .active{
 	background-color: #ED5565;
+	transition: 0.5s;
 }
 
 button.active {
@@ -363,45 +357,51 @@ footer p {
 	background: rgba(0,0,0,0.9);
 	position: absolute;
 	width: 100%;
-	height: 100%;
+	height: 85%;
 	opacity: 0;
 	transition: all ease .5s;
 	-webkit-transition: all ease .5s;
 	-moz-transition: all ease .5s;
 }
-.portfolio-hover p{ font-size: 20px; color:white; line-height: 1.5em; text-transform: none; margin-top: 1em; font-weight: bold;}
-.portfolio-hover i{  font-size: 40px; color: #ED5565;}
+.portfolio-hover p{ font-size: 1.2em; color:white; line-height: 1.5em; text-transform: none; margin-top: 1em; font-weight: bold;}
+.portfolio-hover i{ font-size: 40px; color: #ED5565;}
 .portfolio-hover:hover {
 opacity: 1;
 }
-
-.banniere {
-	width: 100%;
-	height: 50px;
-	text-align: center;
-	padding-bottom: 30px;
-}
-.btn-contacter {
-	width: 170px;
-	border-radius: 50px;
-	background-color: #252627;
-	border-color: #2899be;
-	border-width: 3px;
-	font-weight: bold;
-	color:
-}
 .btn-contacter a{
-	color: #62bcda;
-	font-size: 18px;
-}
-
-.btn-contacter:hover {
-	background-color:#f6f8f8;
-	border-color: #2899be;
+	display: block;
+	margin: auto;
+	padding: 12px 25px;
+	width: 10em;
+	background-color: none;
+	border: 3px solid #ED5565;
+	border-radius: 20px;
+	color: #ED5565;
+	font-size: .8rem;
+	letter-spacing: 2px;
+	position: relative;
+	overflow: hidden;
+	transition: .5s;
+	text-align: center;
 }
 
 .btn-contacter a:hover {
-	color: rgb(17, 17, 17);
+	color: #fff;
+}
+.btn-contacter a::before {
+	content: '';
+	background-color: #ED5565;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0%;
+	height: 100%;
+	z-index: -1;
+	transition: .5s;
+}
+
+.btn-contacter a:hover::before {
+	width: 100%;
 }
 
 .social {
@@ -412,11 +412,18 @@ opacity: 1;
 }
 
 .social img{
-	margin: 1em;
-	width:50px;
-	height: 50px;
+	margin: 0.5em;
+	padding: 0.2em;
+	border: 3px solid #252627;
+	width:5em;
+	height:5em;
+	transition: 0.5s;
 }
 
+.social img:hover{
+	border: 3px solid #ED5565;
+	border-radius: 50%;
+}
 /* @keyframes html {
 	0%{
 		width: 0%;

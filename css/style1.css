@@ -1,28 +1,67 @@
 .container-dev{
   padding: 2em;
+  line-height: 1.8em;
 }
-
-.container-dev h1{
-  color: white;
+.container-dev h1 {font-size: 2.5em;}
+.container-dev h1, h2{
+  color: #ED5565;
   text-align: center;
-  font-size: 2.5em;
 }
-
 .container-dev p{
   width: 1000px;
   color: white;
   text-align: justify;
   margin: 2em auto 2em auto;
   font-size: 1.2em;
-
 }
 
 .details{
+  width: 1000px;
   display: block;
-  width: 100%;
   margin: auto;
+  /* border: 1px solid red; */
 }
-.details video{
+.details ul{
+  margin: 1.5em 0 3em 0;
+  color: white;
+  text-align: justify;
+  font-size: 1.2em;
+}
+.details video, img{
   display: block;
-  margin: auto;
+  margin: 0 auto 3em auto;
+  width: 1000px;
+}
+.github a {
+	padding: 12px 25px;
+	background-color: none;
+	border: 3px solid #ED5565;
+	color: #ED5565;
+	font-size: .8rem;
+	letter-spacing: 2px;
+	position: relative;
+	top: 10px;
+	overflow: hidden;
+	transition: .5s;
+	display: inline-block;
+}
+
+.github a:hover{
+	color: #fff;
+}
+
+.github a::before {
+	content: '';
+	background-color: #ED5565;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 0%;
+	z-index: -1;
+	transition: .5s;
+}
+
+.github a:hover::before {
+	height: 100%;
 }

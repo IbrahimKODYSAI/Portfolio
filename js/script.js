@@ -38,12 +38,13 @@ var scene = new ScrollMagic.Scene({
   .setTween(tl)
   .addTo(controller);
 
-scene.addIndicators();
+// scene.addIndicators();
 
 const showRequiredCategory = event => {
   console.log(event.id)
   const getId = event.id 
   const links =document.querySelectorAll('.work-category button')
+  console.log(links)
   for(i=0; i<links.length; i++) {
     if(links[i].hasAttribute('class')) {
       links[i].classList.remove('active')

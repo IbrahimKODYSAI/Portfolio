@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Portfolio Kody</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!-- <link rel="stylesheet" href="../css/reset.css"> -->
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/style1.css">
+
+	</head>
+	<body>
+		<div class="container navbar">
+			<header>
+				<div class="lgo">
+					<h1>Ibrahim KODY</h1>
+				</div>
+
+				<nav>
+					<ul>
+						<li><a href="../index.html">Retour à l'accueil</a></li>
+					</ul>
+				</nav>
+			</header>
+    </div>
+    <div class="container-dev">
+      <h1>My Chatroom</h1>
+      <div class="details">
+        <p>L'application My Chatroom est un projet réalisé au cours de ma formation à l'ecole O’clock. Le but de ce projet était de mettre en place un Live chatroom  plus précisement un système de messagerie instantannée entre plusieurs client (navigateurs) qui communiquent ensemble à travers un serveur central. La communication peut s'établir de bien des manières, ici j'ai utilisé WebSocket..
+				</p>
+				<div class="github">
+					<a href="https://github.com/IbrahimKODYSAI/react-e15-Projet-ChatroomV2" target="_blank">Lien GitHub</a>
+				</div>
+				<h2>fonctionnalités</h2>
+				<ul>
+					<li>► On peut envoyer un message à tous les navigateurs connectés.</li>
+					<li>► On peut changer de pseudo afin de distinguer chaque client.</li>
+				</ul>
+					<img src="../img/resultat.gif" alt="">
+					
+					<h2>technologie utilisées</h2>
+					<ul>
+						<li>► Côté front : React.js & React-redux</li>
+						<li>► Coté back : Node.js & socket.io</li>
+					</ul>
+					
+					<p>Le front a été réalisé sous React.js puis React-redux pour la centralisation des données ainsi que axios pour la communication front-back</p>
+					<p>La partie back a été réalisé sous node.js. Le serveur permettant la communication entre les clients utilise la librairie socket.io pour réceptionner et renvoyer les requêtes à tous les clients connectés, au moyen d'un WebSocket.</p>
+					<p>le front envoie au serveur, via le WebSocket socket.io, un objet décrivant le message. Le serveur renvoie ensuite ce message tel quel à tous les clients connectés, mais en rajoutant au passage un id unique à chaque message.</p>
+      </div>
+    </div>
+
+		<footer>
+			<hr>
+			<p>2019 Copyright. All Rights Reserved</p>
+		</footer>
+	</body>
+</html>
