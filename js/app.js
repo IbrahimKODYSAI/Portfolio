@@ -1,7 +1,7 @@
 const datas = [
-  "Infographiste débutant",
+  "Infographiste junior",
   "Photographe amateur",
-  "Webdesigner débutant"
+  "Webdesigner junior"
 ]
 const project = [
   {
