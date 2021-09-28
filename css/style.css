@@ -46,6 +46,9 @@ header a,
 .contact h1 {
 	color: #f7f4f4;
 }
+.first-div{
+	width: 650px;
+}
 
 li {
 	list-style: none;
@@ -224,7 +227,7 @@ div[class^='tag-'] p {
 
 .progressbar {
 	position: relative;
-	width: 600px;
+	width: 400px;
 	height: 20px;
 	border: 2px solid #48CFAD;
 	border-radius: 20px;
@@ -234,7 +237,7 @@ div[class^='tag-'] p {
 	font-size: 0.8rem;
 	position: absolute;
 	color: white;
-	left: 95%;
+	left: 91%;
 	bottom: 0.01em;
 }
 div[class^='bar-'] {

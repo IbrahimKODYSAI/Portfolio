@@ -22,14 +22,14 @@ var controller = new ScrollMagic.Controller();
 var tl = new TimelineMax();
 
 tl.fromTo(num, .50, {left: `0%`}, {left: `95%`})
-  .fromTo(htmlBar, .50, {with: `0%`}, {width: `80%`, ease: Power4.easeOut})
+  .fromTo(htmlBar, .50, {with: `0%`}, {width: `85%`, ease: Power4.easeOut})
   .fromTo(photo, .50, {with: `0%`}, {width: `70%`, ease: Power4.easeOut})
   .fromTo(cssBar, .50, {with: `0%`}, {width: `85%`, ease: Power4.easeOut})
   .fromTo(illustrator, .50, {with: `0%`}, {width: `40%`, ease: Power4.easeOut})
   .fromTo(jsBar, .50, {with: `0%`}, {width: `70%`, ease: Power4.easeOut})
   .fromTo(aftereffect, .50, {with: `0%`}, {width: `50%`, ease: Power4.easeOut})
-  .fromTo(reactBar, .50, {with: `0%`}, {width: `75%`, ease: Power4.easeOut})
-  .fromTo(nodeBar, .50, {with: `0%`}, {width: `50%`, ease: Power4.easeOut})
+  .fromTo(reactBar, .50, {with: `0%`}, {width: `80%`, ease: Power4.easeOut})
+  .fromTo(nodeBar, .50, {with: `0%`}, {width: `75%`, ease: Power4.easeOut})
 
 var scene = new ScrollMagic.Scene({
   triggerElement: ".skills",
